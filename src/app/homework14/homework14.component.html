@@ -1,0 +1,34 @@
+<div class="wrapper">
+  <form id="inp" class="mb-3" name="inp">
+    <label for="task">Task</label>
+    <input type="text" name="task" placeholder="enter task" id="task" class="task">
+    <button  type="button" id="add" class="add">Add</button>
+<!--    <button type="button" [disabled]="isSave" ]>Save</button>-->
+  </form>
+  <table class="table">
+    <thead id="t">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Task</th>
+      <th scope="col">DONE/IN PROGRESS</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+    </thead>
+    <tbody id="userCol" >
+    <tr>
+      <td></td>
+      <td></td>
+      <td>
+        <input type="checkbox">
+      </td>
+      <td>
+        <p *ngIf="isDone">In progress</p>
+        <p *ngIf="isDone">DONE</p>
+      </td>
+      <td><button type="button">Delete</button></td>
+      <td><button type="button">Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
